@@ -1,6 +1,9 @@
 
 # 代码步骤
 
+## config
+自定将config.local1.js替换为config.local.js 并加上对应配置
+
 - 使用schedule
 在项目启动时候运行脚本
 
