@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no,email=no" />
+  <meta name="keywords" content="{{keywords}}" />
+  <meta name="description" content="{{description}}" />
+  {{ helper.requireStatic("css/main.css") }}
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    var menuData = {{ menuList | safe }};
+    var userInfo = {{ userInfo | safe }};
+  </script>
+  {{ helper.requireStatic("js/main.js") }}
+</body>
+</html>

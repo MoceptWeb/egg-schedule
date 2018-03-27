@@ -1,0 +1,17 @@
+logs/
+npm-debug.log
+yarn-error.log
+node_modules/
+package-lock.json
+yarn.lock
+coverage/
+.idea/
+config/config.local.js
+config/config.uat.js
+config/config.prod.js
+config/config.test.js
+readme.1.md
+run/
+.DS_Store
+*.sw*
+*.un~
