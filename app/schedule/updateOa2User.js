@@ -7,7 +7,7 @@ class TaskPortal extends Subscription {
   static get schedule() {
     return {
       interval: '525600m', // 1 年间隔
-      type: 'worker', // 指定所有的 worker 都需要执行
+      type: 'worker', // worker 类型：每台机器上只有一个 worker 会执行这个定时任务，每次执行定时任务的 worker 的选择是随机的。
     };
   }
 
