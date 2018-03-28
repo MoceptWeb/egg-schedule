@@ -32,16 +32,19 @@ class OaService extends Service {
     async updateUser(oaUser) {
         const self = this;
         let promiseAll = [];
-      // 设置promise对象，同步发请求
+         // 设置promise对象，同步发请求
         oaUser.forEach(oa => {
           promiseAll.push(Promise.resolve(self.updateUserByName(oa)));
         });
+
+        // promiseAll = oaUser.map(oa => {
+        //     self.updateUserByName(oa)
+        //   });
         await Promise.all(promiseAll);
     }
 
     async updateUserByName(oaUser) {
         const res = await this.ctx.helper.mysqlQuery('select user_name,user_id,user_account from t_user where user_name = ?', [oaUser.lastname]);
-        console.log(res);
         let update = null;
         if(res && res.length === 1) {
             update = await this.updateUserByUserId(oaUser, res[0])
@@ -50,6 +53,7 @@ class OaService extends Service {
             update = await this.updateUserByAccount(oaUser)
         } 
         // if(res.rowsAffected[0])
+        return update;
     }
 
     async updateUserByAccount(oaUser) {
