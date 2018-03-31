@@ -7,7 +7,7 @@ module.exports = app => {
   app.beforeStart(async () => {
     // 第一次任务
     await app.runSchedule('updateOa2User');
-    // 第一次任务
+    // 第二次任务
     // await app.runSchedule('updatePortal2User');
   });
 
