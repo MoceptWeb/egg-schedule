@@ -23,7 +23,7 @@ mysql -h172.16.1.13 -uroot -ppwd -e "SELECT CONCAT('insert into info(user_id,mai
 
 - updateOa2User 任务
    -  info日志中schedule updateOa2User finish
-   -  主要查看error日志中 “数据库error” 关键字
+   -  主要查看error日志中 “数据库error”， “登录名loginid匹配运营account有超过两条数据” 关键字，
 
 - updatePortal2User 任务
    -  info日志中schedule updatePortal2User finish

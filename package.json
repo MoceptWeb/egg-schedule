@@ -28,12 +28,12 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production egg-scripts start --port=7001 --daemon --title=egg-server-prod --env=prod",
+    "start": "NODE_ENV=production egg-scripts start --port=3001 --daemon --title=egg-server-prod --env=prod",
     "stop": "egg-scripts stop",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "sit": "egg-scripts start --port=7001 --daemon --title=egg-server-sit --env=test",
-    "uat": "NODE_ENV=production egg-scripts start --port=7001 --daemon --title=egg-server-preview --env=uat",
+    "sit": "egg-scripts start --port=3001 --daemon --title=egg-server-sit --env=test",
+    "uat": "NODE_ENV=production egg-scripts start --port=3001 --daemon --title=egg-server-preview --env=uat",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
